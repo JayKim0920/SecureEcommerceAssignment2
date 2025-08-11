@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment</title>
+</head>
+<body>
+  <h2>Checkout - Payment</h2>
+
+  <!-- Your Scripts -->
+  <script src="assets/js/google-pay.js"></script>
+  <script src="assets/js/stripe-pay.js"></script>
+
+
+  <!-- Google Pay -->
+  <div id="container-google-pay"></div>
+
+  <!-- Stripe -->
+  <button id="stripe-button">Pay with Stripe</button>
+
+  <!-- Google Pay SDK -->
+  <script src="https://pay.google.com/gp/p/js/pay.js" async onload="onGooglePayLoaded()"></script>
+
+  <!-- Stripe SDK -->
+  <script src="https://js.stripe.com/v3/"></script>
+
+</body>
+</html>
