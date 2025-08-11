@@ -3,9 +3,16 @@
 
 header('Content-Type: application/json');
 
+// Load .env file
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+// Get the secret key from .env
+$stripe = new \Stripe\StripeClient($_ENV['STRIPE_SECRET_KEY']);
+
 // reccommends useage of .env on local. Since this is a simple demo, the variables are directly assigned with values
 // Do NOT expose the secret key onto the site.
-$stripeSecretKey = 'REMOVED'; // <-- TODO : Enter Scret key
+$stripeSecretKey = ($_ENV['STRIPE_SECRET_KEY']); // <-- TODO : Enter Scret key
 
 require __DIR__ . '/vendor/autoload.php'; // For when composer is used to install stripe.
 
