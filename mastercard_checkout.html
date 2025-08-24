@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mastercard Checkout</title>
+</head>
+<body>
+  <h2>Mastercard Payment</h2>
+  <form action="./process_mastercard.php" method="POST">
+      <!-- Product Details -->
+      <input type="hidden" name="item_name" value="Electric Bike">
+      <input type="hidden" name="item_number" value="EBIKE001">
+      <input type="hidden" name="amount" value="3000">
+      <input type="hidden" name="currency_code" value="USD">
+
+      <!-- Dummy Mastercard Fields -->
+      <label>Card Number:</label><br>
+      <input type="text" name="card_number" value="5555555555554444" ><br><br>
+
+      <label>Expiry Date:</label><br>
+      <input type="text" name="expiry" value="12/30" ><br><br>
+
+      <label>CVV:</label><br>
+      <input type="text" name="cvv" value="123" ><br><br>
+
+      <input type="submit" value="Confirm Payment"
+             style="background-color:#eb001b; color:#fff; border:none; padding:10px 20px; border-radius:5px; cursor:pointer; font-size:16px;">
+  </form>
+</body>
+</html>
