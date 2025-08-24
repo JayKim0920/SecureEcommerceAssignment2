@@ -19,6 +19,32 @@
   <!-- Stripe -->
   <button id="stripe-button">Pay with Stripe</button>
 
+     <!-- PayPal Sandbox -->
+  <div style="margin-top:20px;">
+    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+        <!-- Business Email -->
+        <input type="hidden" name="business" value="hlinhlinh131313@gmail.com">
+
+        <!-- PayPal Command -->
+        <input type="hidden" name="cmd" value="_xclick">
+
+        <!-- Product Details -->
+        <input type="hidden" name="item_name" value="Electric Bike">
+        <input type="hidden" name="item_number" value="EBIKE001">
+        <input type="hidden" name="amount" value="3000">
+        <input type="hidden" name="currency_code" value="USD">
+
+        <!-- Redirect URLs -->
+        <input type="hidden" name="return" value="http://localhost/SecureEcommerceAssignment2/sucess.php">
+        <input type="hidden" name="cancel_return" value="http://localhost/SecureEcommerceAssignment2/cancel.php">
+        <input type="hidden" name="notify_url" value="http://127.0.0.1/SecureEcommerceAssignment2/ipn_listener.php">
+
+        <!-- PayPal Button -->
+        <input type="submit" value="Pay with PayPal" 
+               style="background-color:#0070ba; color:#fff; border:none; padding:10px 20px; border-radius:5px; cursor:pointer; font-size:16px;">
+    </form>
+  </div>
+
   <!-- Google Pay SDK -->
   <script src="https://pay.google.com/gp/p/js/pay.js" async onload="onGooglePayLoaded()"></script>
 
